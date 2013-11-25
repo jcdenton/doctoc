@@ -141,7 +141,7 @@ check(
     ].join('')
 )
 
-// bigbucket.org
+// bitbucket.org
 check(
     [ '# My Module'
     , 'Some text here'
@@ -160,4 +160,18 @@ check(
     ,         '\t\t\t- [Main Usage](#markdown-header-main-usage)\n\n'
     ].join('')
   , 'bitbucket.org'
+)
+
+check(
+    [ '# My title with ampersand & whatever else'
+    , 'Some text here'
+    , '## API'
+    , 'workz laek a boss'
+    ].join('\n')
+  , [ '**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*'
+    , ''
+    , '- [My title with ampersand & whatever else](#my-title-with-ampersand--whatever-else)'
+    ,   '\t- [API](#api)'
+    , ''
+    ].join('\n')
 )
